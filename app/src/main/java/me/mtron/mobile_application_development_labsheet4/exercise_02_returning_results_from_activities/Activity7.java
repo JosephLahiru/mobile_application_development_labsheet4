@@ -18,7 +18,7 @@ public class Activity7 extends AppCompatActivity {
     EditText e_text4;
     EditText e_text5;
     EditText e_text6;
-    Button btn5;
+    Button btn6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,9 @@ public class Activity7 extends AppCompatActivity {
         e_text5 = findViewById(R.id.e_text5);
         e_text6 = findViewById(R.id.e_text6);
 
-        btn5 = findViewById(R.id.btn5);
+        btn6 = findViewById(R.id.btn6);
 
-        btn5.setOnClickListener(new View.OnClickListener() {
+        btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int val1 = Integer.parseInt(e_text3.getText().toString());

@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import me.mtron.mobile_application_development_labsheet4.R;
-import me.mtron.mobile_application_development_labsheet4.example_02.Activity3;
 
 public class Activity6 extends AppCompatActivity {
 
