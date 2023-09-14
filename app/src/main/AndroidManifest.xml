@@ -14,6 +14,12 @@
         android:theme="@style/Theme.Mobile_application_development_labsheet4"
         tools:targetApi="31">
         <activity
+            android:name=".exercise_03_returning_results_from_activities.Activity9"
+            android:exported="false" />
+        <activity
+            android:name=".exercise_02_returning_results_from_activities.Activity6"
+            android:exported="false" />
+        <activity
             android:name=".exercise_02_returning_results_from_activities.Activity7"
             android:exported="false" />
         <activity
@@ -32,7 +38,7 @@
             android:name=".example_01.Activity1"
             android:exported="false" />
         <activity
-            android:name=".exercise_02_returning_results_from_activities.Activity6"
+            android:name=".exercise_03_returning_results_from_activities.Activity8"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
