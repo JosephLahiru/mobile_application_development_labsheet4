@@ -1,5 +1,6 @@
 package me.mtron.mobile_application_development_labsheet4.example_02;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -31,5 +32,14 @@ public class Activity2 extends AppCompatActivity {
                 startActivityForResult(intent, MY_REQUEST_CODE);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==MY_REQUEST_CODE){
+            String message = data.getStringExtra("MESSAGE");
+            text1.setText(message);
+        }
     }
 }
