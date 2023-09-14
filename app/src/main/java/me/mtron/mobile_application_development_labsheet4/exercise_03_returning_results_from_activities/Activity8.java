@@ -7,15 +7,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import me.mtron.mobile_application_development_labsheet4.R;
-import me.mtron.mobile_application_development_labsheet4.exercise_02_returning_results_from_activities.Activity7;
 
 public class Activity8 extends AppCompatActivity {
 
     Button btn5;
-    TextView text3;
+    TextView text8;
+    ImageView imageView;
     static final int MY_REQUEST_CODE3 = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class Activity8 extends AppCompatActivity {
         setContentView(R.layout.activity_8);
 
         btn5 = findViewById(R.id.btn7);
-        text3 = findViewById(R.id.text8);
+        text8 = findViewById(R.id.text8);
 
         Intent intent = new Intent(this, Activity9.class);
 
@@ -40,7 +42,31 @@ public class Activity8 extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==MY_REQUEST_CODE3){
             String message = data.getStringExtra("MESSAGE");
-            text3.setText(message);
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+            imageView = new ImageView(this);
+            switch (message){
+                case "white":
+                    imageView.setImageResource(R.drawable.oxygen);
+                    break;
+                case "brown":
+                    imageView.setImageResource(R.drawable.hilium);
+                    break;
+                case "dark green":
+                    imageView.setImageResource(R.drawable.argon);
+                    break;
+                case "red":
+                    imageView.setImageResource(R.drawable.hydrogen);
+                    break;
+                case "maroon":
+                    imageView.setImageResource(R.drawable.acetylene);
+                    break;
+                case "black":
+                    imageView.setImageResource(R.drawable.nitrogen);
+                    break;
+                default:
+                    imageView.setImageResource(R.drawable.notfound);
+            }
+            text8.setBackground(imageView.getDrawable());
         }
     }
 }
